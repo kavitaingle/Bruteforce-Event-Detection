@@ -1,6 +1,19 @@
-#Bruteforce-Event-Detection
-#Developed a system to detect brute force attacks by analyzing Windows Security Event Logs using Python. Implemented a script to identify and flag suspicious login activities, enhancing security monitoring capabilities.
+Brute-force Event Detection
 
+Objective: Developed a system to detect brute force attacks by analyzing security event logs.
+
+Approach: Implemented a script to query and process Windows Security Event Logs, extracting relevant features such as failed login attempts.
+
+Technologies: Utilized Python, win32evtlog for log retrieval.
+
+Outcome: Successfully identified and flagged suspicious login activities, enhancing the security monitoring capabilities.
+
+
+## Deployment
+
+To deploy this project run
+
+```
 import win32evtlog
 
 server = "localhost"
@@ -40,5 +53,6 @@ def DetectBruteForce(filename=None):
  failures = DetectBruteForce(filename)
  for account in failures:
      print("%s: %sfailed logins"%(account,failures[account]))
-     
-    
+      
+```
+
